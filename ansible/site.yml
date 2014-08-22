@@ -1,0 +1,14 @@
+---
+# Run this playbook from the command line like this:
+# $ ansible-playbook --private-key=~/.ssh/GemaTouchCTS.pem -i dev_server.yml site.yml
+# $ ansible-playbook --private-key=~/.ssh/AtlasGemaTouch -i atlas_server.yml site.yml
+
+- hosts: webservers
+  remote_user: deploy
+  sudo: True
+  sudo_user: deploy
+
+  roles:
+     - common
+     - webservers
+     - gema-app

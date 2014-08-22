@@ -1,0 +1,5 @@
+---
+# plays common across all servers
+
+- name: Display the files
+  command: ls -al /opt/gema

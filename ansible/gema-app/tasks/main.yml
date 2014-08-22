@@ -1,0 +1,10 @@
+---
+# plays for gema app
+
+- name: Create the folders
+  command: mkdir -p /opt/gema/ansible
+  args:
+    creates: /opt/gema/ansible
+
+- name: Copy the Python files to the server
+  copy: src=requirements.txt dest=/opt/gema/ansible/
