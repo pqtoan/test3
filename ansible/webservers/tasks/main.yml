@@ -1,0 +1,5 @@
+---
+# plays for web servers
+
+- name: Display the files
+  command: ls -al /etc/nginx
